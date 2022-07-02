@@ -19,6 +19,7 @@ import java.util.*
 class CreateNoteFragment : BaseFragment() {
     private lateinit var binding: CreateNoteFragmentBinding
     private var currentDate: String? = null
+    var selectedColor= "#171C2C"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
