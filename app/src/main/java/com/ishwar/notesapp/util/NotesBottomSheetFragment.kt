@@ -108,7 +108,7 @@ class NotesBottomSheetFragment : BottomSheetDialogFragment() {
 
 
         }
-        binding.fNote1.setOnClickListener {
+        binding.fNote2.setOnClickListener {
 
             binding.imgNote.setImageResource(0)
             binding.imgNote2.setImageResource(R.drawable.ic_tick)
@@ -126,7 +126,7 @@ class NotesBottomSheetFragment : BottomSheetDialogFragment() {
 
 
         }
-        binding.fNote1.setOnClickListener {
+        binding.fNote4.setOnClickListener {
             binding.imgNote.setImageResource(0)
             binding.imgNote2.setImageResource(0)
             binding.imgNote4.setImageResource(R.drawable.ic_tick)
@@ -141,7 +141,7 @@ class NotesBottomSheetFragment : BottomSheetDialogFragment() {
             dismiss()
         }
 
-        binding.fNote1.setOnClickListener {
+        binding.fNote5.setOnClickListener {
             binding.imgNote.setImageResource(0)
             binding.imgNote2.setImageResource(0)
             binding.imgNote4.setImageResource(0)
@@ -155,7 +155,7 @@ class NotesBottomSheetFragment : BottomSheetDialogFragment() {
             LocalBroadcastManager.getInstance(requireContext()).sendBroadcast(intent)
             dismiss()
         }
-        binding.fNote1.setOnClickListener {
+        binding.fNote6.setOnClickListener {
             binding.imgNote.setImageResource(0)
             binding.imgNote2.setImageResource(0)
             binding.imgNote4.setImageResource(0)
@@ -169,7 +169,7 @@ class NotesBottomSheetFragment : BottomSheetDialogFragment() {
             LocalBroadcastManager.getInstance(requireContext()).sendBroadcast(intent)
             dismiss()
         }
-        binding.fNote1.setOnClickListener {
+        binding.fNote7.setOnClickListener {
             binding.imgNote.setImageResource(0)
             binding.imgNote2.setImageResource(0)
             binding.imgNote4.setImageResource(0)

@@ -74,7 +74,8 @@ class CreateNoteFragment : BaseFragment() {
         }
 
         binding.imgBack.setOnClickListener {
-            replaceFragment(HomeFragment.newInstance(), false)
+            requireActivity().supportFragmentManager.popBackStack()
+//            replaceFragment(HomeFragment.newInstance(), false)
         }
 
         binding.imgMore.setOnClickListener {
@@ -134,23 +135,23 @@ class CreateNoteFragment : BaseFragment() {
 
     private val broadCastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context?, intent: Intent?) {
-            var actionColor = intent!!.getStringExtra("actionColor")
+            var actionColor = intent!!.getStringExtra("selectedColor")
 
             when (actionColor!!) {
                 "Blue" -> {
-                    selectedColor = intent.getStringExtra("selectedColor")!!
+                    selectedColor = intent.getStringExtra("actionColor")!!
                     binding.colorView.setBackgroundColor(Color.parseColor(selectedColor))
                 }
                 "Yellow" -> {
-                    selectedColor = intent.getStringExtra("selectedColor")!!
+                    selectedColor = intent.getStringExtra("actionColor")!!
                     binding.colorView.setBackgroundColor(Color.parseColor(selectedColor))
                 }
                 "purple" -> {
-                    selectedColor = intent.getStringExtra("selectedColor")!!
+                    selectedColor = intent.getStringExtra("actionColor")!!
                     binding.colorView.setBackgroundColor(Color.parseColor(selectedColor))
                 }
                 "green" -> {
-                    selectedColor = intent.getStringExtra("selectedColor")!!
+                    selectedColor = intent.getStringExtra("actionColor")!!
                     binding.colorView.setBackgroundColor(Color.parseColor(selectedColor))
                 }
                 "orange" -> {
@@ -168,6 +169,11 @@ class CreateNoteFragment : BaseFragment() {
             }
         }
 
+    }
+
+    override fun onDestroy() {
+        LocalBroadcastManager.getInstance(requireContext()).unregisterReceiver(broadCastReceiver)
+        super.onDestroy()
     }
 
 }
