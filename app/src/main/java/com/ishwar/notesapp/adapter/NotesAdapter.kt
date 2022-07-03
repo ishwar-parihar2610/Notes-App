@@ -34,6 +34,7 @@ class NotesAdapter(val arrList: List<Notes>) :
         if (arrList[position].color != null) {
             holder.itemRvNotesBinding.cardView.setCardBackgroundColor(Color.parseColor(arrList[position].color))
         }else{
+            holder.itemRvNotesBinding.cardView.setCardBackgroundColor(Color.parseColor("#171C26"))
            // holder.itemRvNotesBinding.cardView.setCardBackgroundColor(R.color.ColorLightBlack)
         }
     }//R.color.ColorLightBlack

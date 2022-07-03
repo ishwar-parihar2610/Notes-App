@@ -6,6 +6,7 @@ import android.content.Intent
 import android.content.IntentFilter
 import android.graphics.Color
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -152,14 +153,17 @@ class CreateNoteFragment : BaseFragment() {
                 }
                 "green" -> {
                     selectedColor = intent.getStringExtra("actionColor")!!
+                    Log.d("Create New Fragment ", "onReceive: $selectedColor ")
                     binding.colorView.setBackgroundColor(Color.parseColor(selectedColor))
                 }
                 "orange" -> {
-                    selectedColor = intent.getStringExtra("selectedColor")!!
+
+                    selectedColor = intent.getStringExtra("actionColor")!!
+                    Log.d("Create New Fragment ", "onReceive: $selectedColor ")
                     binding.colorView.setBackgroundColor(Color.parseColor(selectedColor))
                 }
                 "black" -> {
-                    selectedColor = intent.getStringExtra("selectedColor")!!
+                    selectedColor = intent.getStringExtra("actionColor")!!
                     binding.colorView.setBackgroundColor(Color.parseColor(selectedColor))
                 }
                 else -> {
