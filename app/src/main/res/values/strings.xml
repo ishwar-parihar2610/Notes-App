@@ -5,5 +5,11 @@
     <string name="notes_title">Notes Title</string>
     <string name="notes_sub_title">Notes Sub Title</string>
     <string name="notes_description">Enter Note Here</string>
+<!--    <string name="search">Search</string>-->
+
+
+    <string name="storage_permission_text">This app needs access to your storage</string>
     <string name="search">Search</string>
+
+
 </resources>

@@ -57,6 +57,16 @@ dependencies {
     // optional - Kotlin Extensions and Coroutines support for Room
     implementation "androidx.room:room-ktx:2.4.2"
 
+    implementation 'com.makeramen:roundedimageview:2.3.0'
+
+    //crop image library
+
+   // implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+
+    //easy permission
+
+    implementation 'pub.devrel:easypermissions:3.0.0'
+
     // Coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1"
 }

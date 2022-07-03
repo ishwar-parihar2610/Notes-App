@@ -169,6 +169,7 @@ class NotesBottomSheetFragment : BottomSheetDialogFragment() {
             LocalBroadcastManager.getInstance(requireContext()).sendBroadcast(intent)
             dismiss()
         }
+
         binding.fNote7.setOnClickListener {
             binding.imgNote.setImageResource(0)
             binding.imgNote2.setImageResource(0)
@@ -180,6 +181,12 @@ class NotesBottomSheetFragment : BottomSheetDialogFragment() {
             val intent = Intent("bottom_sheet_action")
             intent.putExtra("actionColor", selectedColor)
             intent.putExtra("selectedColor", "black")
+            LocalBroadcastManager.getInstance(requireContext()).sendBroadcast(intent)
+            dismiss()
+        }
+        binding.layoutImage.setOnClickListener {
+            val intent = Intent("bottom_sheet_action")
+            intent.putExtra("selectedColor", "image")
             LocalBroadcastManager.getInstance(requireContext()).sendBroadcast(intent)
             dismiss()
         }

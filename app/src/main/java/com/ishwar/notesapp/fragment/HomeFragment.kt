@@ -45,16 +45,16 @@ class HomeFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        var manager=StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
+        var manager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         manager.isSmoothScrolling
 
-        binding.recycleView.isNestedScrollingEnabled=false
-        binding.recycleView.layoutManager =manager
+        binding.recycleView.isNestedScrollingEnabled = false
+        binding.recycleView.layoutManager = manager
 
         launch {
             context?.let {
-                var notes=NotesDatabase.getDatabase(it).noteDao().getAllNotes()
-                binding.recycleView.adapter=NotesAdapter(notes)
+                var notes = NotesDatabase.getDatabase(it).noteDao().getAllNotes()
+                binding.recycleView.adapter = NotesAdapter(notes)
 
 
             }
